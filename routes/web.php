@@ -26,4 +26,4 @@ Route::group(['namespace' => 'Usere', 'prefix' => '/users'], function () {
     Route::get('/some', 'SomeController@someMethod');
 });
 
-Route::get('/', 'ViewArticles@showPost');
+Route::get('/', 'TestController@showPost');
