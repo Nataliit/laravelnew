@@ -1,1 +1,0 @@
-@include('parts.feedback-form')

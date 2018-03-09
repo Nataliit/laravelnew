@@ -17,9 +17,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
 
-
-Route::match(['get', 'post'], '/postForm', function(Request $request) {
-    //var_dump($request->all());
-    return $request->all();
-    //var_dump($_REQUEST);
-});
+//Route::any('/postForm', function (Request $request) {
+//    return $request->all();
+//});
