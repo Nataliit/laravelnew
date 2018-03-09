@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['namespace' => 'Admin', 'prefix' => '/admin'], function () {
+    Route::get('/add', 'AddArticle@someMethod');
+    Route::get('/delete', 'DeleteArticle@someMethod');
+});
+
+Route::group(['namespace' => 'Usere', 'prefix' => '/users'], function () {
+    Route::get('/some', 'SomeController@someMethod');
+});
+
+Route::get('/', 'ViewArticles@showPost');
